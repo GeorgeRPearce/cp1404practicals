@@ -1,0 +1,48 @@
+MENU = """(G)et a valid score (0-100)
+(P)rint result (copy or import your function to determine the result from score.py)
+(S)how stars (this prints as many stars as the score)
+(Q)uit"""
+
+
+def main():
+    print(MENU)
+    choice = input("Enter your choice: ").upper()
+    while choice != "Q":
+        if choice == "G":
+            score = score_selector()
+        elif choice == "P":
+            print(parameter(score))
+        elif choice == "S":
+            stars(score)
+        else:
+            print("Invalid")
+        print(MENU)
+        choice = input("Enter your choice: ").upper()
+    print("Adios")
+
+
+def score_selector():
+    score_selected = int(input("Enter score: "))
+    return score_selected
+
+
+def parameter(score):
+    if score <= 0:
+        grade = "Invalid score"
+    elif score > 100:
+        grade = "Invalid score"
+    elif score >= 90:
+        grade = "Excellent"
+    elif score >= 50:
+        grade = "Passable"
+    elif score < 50:
+        grade = "Bad"
+    return grade
+
+
+def stars(score):
+    print(score * "*")
+    return score
+
+
+main()
