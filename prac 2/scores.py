@@ -5,7 +5,6 @@ Broken program to determine score status
 import random
 
 
-# TODO: Fix this!
 def main():
     score = float(input("Enter score: "))
     grade = parameter(score)
