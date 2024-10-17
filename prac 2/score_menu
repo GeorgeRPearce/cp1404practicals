@@ -2,6 +2,8 @@ MENU = """(G)et a valid score (0-100)
 (P)rint result (copy or import your function to determine the result from score.py)
 (S)how stars (this prints as many stars as the score)
 (Q)uit"""
+
+
 def main():
     print(MENU)
     choice = input("Enter your choice: ").upper()
@@ -22,6 +24,7 @@ def main():
 def score_selector():
     score_selected = int(input("Enter score: "))
     return score_selected
+
 
 def parameter(score):
     if score <= 0:
