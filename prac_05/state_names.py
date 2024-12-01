@@ -1,0 +1,23 @@
+"""
+CP1404/CP5632 Practical
+State names in a dictionary
+File needs reformatting
+"""
+
+# TODO: Reformat this file so the dictionary code follows PEP 8 convention
+CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales",
+                "NT": "Northern Territory", "WA": "Western Australia",
+                "ACT": "Australian Capital Territory", "VIC": "Victoria",
+                "TAS": "Tasmania", "SA": "South Australia"}
+state_names = ["qld", "nsw", "nt", "wa", "act", "tas", "vic", ""]
+loop = 0
+print(CODE_TO_NAME)
+
+state_code = state_names[loop].upper()
+while state_code != "":
+    loop += 1
+    if state_code in CODE_TO_NAME:
+        print("{:3}".format(state_code), "is", CODE_TO_NAME[state_code])
+    else:
+        print("Invalid short state")
+    state_code = state_names[loop].upper()
